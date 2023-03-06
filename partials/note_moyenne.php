@@ -9,8 +9,8 @@
                 <i class="fa-solid fa-star text-yellow-400"></i>
                 <i class="fa-solid fa-star text-yellow-400 "></i>
                 <i class="fa-solid fa-star text-yellow-400"></i>
-                <i class="fa-solid fa-star text-gray-200"></i>
-                <i class="fa-solid fa-star text-gray-200"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
             </div>
             <span>4 avis</span>
         </div>
