@@ -1,10 +1,15 @@
+<?php
+
+require __DIR__.'/../config/functions.php';
+
+?>
 <div class="border-2">
     <div class="bg-gray-100">
        <span> Notes moyennes</span>
     </div>
     <div class="flex flex-wrap justify-between">
         <div class="text-center w-1/3 flex flex-col py-4 space-y-2">
-            <span class="text-yellow-400 text-xl">3.3/5</span>
+            <span class="text-yellow-400 text-xl"><?= $rst = avgNote() ?>/5</span>
             <div class="flex flex-wrap space-x-1 justify-center">
                 <i class="fa-solid fa-star text-yellow-400"></i>
                 <i class="fa-solid fa-star text-yellow-400 "></i>
@@ -12,7 +17,7 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
             </div>
-            <span>4 avis</span>
+            <span><?= count($add_previews) ?> avis</span>
         </div>
         <div class="w-1/3">
             <div class="flex flex-wrap justify-center space-x-3 py-1">
