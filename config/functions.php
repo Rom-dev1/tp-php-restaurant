@@ -1,36 +1,48 @@
 <?php
 
- $add_previews = [
+ $previews = [
     [
         'name' => 'Maxine Trochu',
         'comment' => 'tres bon',
-        'note' => 5
+        'note' => 4
     ],
     [
         'name' => 'Charlie Trochu',
         'comment' => 'bon',
-        'note' => 4
+        'note' => 5
     ],
     [
         'name' => 'Anna Webert',
         'comment' => 'moyen',
-        'note' => 3
+        'note' => 2
     ],
     [
         'name' => 'cachou',
         'comment' => 'mauvais',
-        'note' => 4
+        'note' => 3
     ],
-];   
+];
+
+
 
 function avgNote(){
-    global $add_previews;
+    global $previews;
     $sum = 0;
-    foreach ($add_previews as $note){
-        $nb = ($note['note']);
-        $sum += $nb;
+    foreach ($previews as $preview){
+        $note = ($preview['note']);
+        $sum += $note;
     }
-    return round($sum/count($add_previews), 1);
+    return round($sum/count($previews), 1);
+}
+
+function countNote($note){
+    global $previews;
+    $notes = [];
+    foreach ($previews as $preview){
+        $notes[] = $preview['note'];
+    }
+    $countNote = count(array_keys($notes, $note));
+    return $countNote;
 }
 
 // public static function dateToFrench($date, $format) 
@@ -42,3 +54,5 @@ function avgNote(){
 //     return str_replace($english_months, $french_months, str_replace($english_days, $french_days, date($format, strtotime($date) ) ) );
 // }
 ?>
+
+<!-- $rst > 0.5 || $rst > 1.5 || $rst > 2.5 || $rst > 3.5 || $rst > 4.5 -->
