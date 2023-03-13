@@ -14,7 +14,7 @@ function avgNote($array, $value){
         $note = $key[$value];
         $sum += $note;
     }
-    return round($sum/count($key), 1);
+    return round($sum/count($array), 1);
 }
 
 // trouve le nombre d'occurence d'une meme note
