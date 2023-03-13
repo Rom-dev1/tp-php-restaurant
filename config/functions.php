@@ -9,17 +9,22 @@
     [
         'name' => 'Charlie Trochu',
         'comment' => 'bon',
-        'note' => 5
+        'note' => 4
+    ],
+    [
+        'name' => 'Anna Webert',
+        'comment' => 'moyen',
+        'note' => 3
+    ],
+    [
+        'name' => 'cachou',
+        'comment' => 'mauvais',
+        'note' => 4
     ],
     [
         'name' => 'Anna Webert',
         'comment' => 'moyen',
         'note' => 2
-    ],
-    [
-        'name' => 'cachou',
-        'comment' => 'mauvais',
-        'note' => 3
     ],
 ];
 
@@ -56,3 +61,4 @@ function countNote($note){
 ?>
 
 <!-- $rst > 0.5 || $rst > 1.5 || $rst > 2.5 || $rst > 3.5 || $rst > 4.5 -->
+
