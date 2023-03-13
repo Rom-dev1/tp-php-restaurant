@@ -1,53 +1,29 @@
 <?php
 
- $previews = [
-    [
-        'name' => 'Maxine Trochu',
-        'comment' => 'tres bon',
-        'note' => 4
-    ],
-    [
-        'name' => 'Charlie Trochu',
-        'comment' => 'bon',
-        'note' => 4
-    ],
-    [
-        'name' => 'Anna Webert',
-        'comment' => 'moyen',
-        'note' => 3
-    ],
-    [
-        'name' => 'cachou',
-        'comment' => 'mauvais',
-        'note' => 4
-    ],
-    [
-        'name' => 'Anna Webert',
-        'comment' => 'moyen',
-        'note' => 2
-    ],
-];
+require __DIR__.'/db.php';
 
+// requete permettant de récupere l'ensemble de la table
+$reviews = db()->query('SELECT * FROM reviews')->fetchAll();
 
+   
 
-function avgNote(){
-    global $previews;
+// calcul note moyenne 
+function avgNote($array, $value){
     $sum = 0;
-    foreach ($previews as $preview){
-        $note = ($preview['note']);
+    foreach ($array as $key){
+        $note = $key[$value];
         $sum += $note;
     }
-    return round($sum/count($previews), 1);
+    return round($sum/count($key), 1);
 }
 
-function countNote($note){
-    global $previews;
+// trouve le nombre d'occurence d'une meme note
+function countNote($array, $value, $increment){
     $notes = [];
-    foreach ($previews as $preview){
-        $notes[] = $preview['note'];
+    foreach ($array as $key){
+        $notes[] = $key[$value];
     }
-    $countNote = count(array_keys($notes, $note));
-    return $countNote;
+    return  count(array_keys($notes, $increment));
 }
 
 // public static function dateToFrench($date, $format) 

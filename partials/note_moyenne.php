@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'/../config/functions.php';
+require __DIR__.'/../config/functions.php'
 
 ?>
 <div class="border-2">
@@ -9,7 +9,7 @@ require __DIR__.'/../config/functions.php';
     </div>
     <div class="flex flex-wrap justify-between py-4">
         <div class="text-center w-1/3 flex flex-col py-4 space-y-2">
-            <span class="text-yellow-400 text-xl"><?= $rst = avgNote() ?>/5</span>
+            <span class="text-yellow-400 text-xl"><?= $rst = avgNote($reviews, 'note') ?>/5</span>
             <div class="flex flex-wrap space-x-1 justify-center">
                 <?php
                     for($y = 1; $y <= $rst; $y++) {  ?>
@@ -28,9 +28,9 @@ require __DIR__.'/../config/functions.php';
                     <?php } ?>
                 <?php } ?>
             </div>
-            <span><?= count($previews) ?> avis</span>
+            <span><?= count($reviews) ?> avis</span>
         </div>
-                        
+
         <div class="w-1/3">
             <?php for($i = 5; $i >=1; $i--) { ?>
                 <div class="flex flex-wrap justify-center space-x-3 py-1 items-center h-[25px]">
@@ -39,11 +39,11 @@ require __DIR__.'/../config/functions.php';
                         <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
                     </div>
                     <div class="flex w-3/4 rounded-md  overflow-hidden bg-gray-200 h-[15px] ">
-                        <?php  for($y = 1; $y <= countNote($i); $y++) { ?>
+                        <?php  for($y = 1; $y <= countNote($reviews, 'note', $i); $y++) { ?>
                             <div class="w-1/5 bg-yellow-400"> </div>
                         <?php } ?>
                     </div>
-                    <span>(<?= $countNote= countNote($i) ?>)</span>
+                    <span>(<?= countNote($reviews, 'note', $i) ?>)</span>
                 </div>
             <?php } ?> 
         </div>
