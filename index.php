@@ -1,8 +1,8 @@
 <?php 
     require __DIR__.'/partials/header.php';
-    require __DIR__.'/partials/note_moyenne.php';
-    require __DIR__.'/partials/post_review.php';
-    require __DIR__.'/partials/list_reviews.php';
+    require __DIR__.'/note_moyenne.php';
+    require __DIR__.'/post_review.php';
+    require __DIR__.'/list_reviews.php';
 ?>
 
 

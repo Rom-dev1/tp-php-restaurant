@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'/../config/functions.php'
+require __DIR__.'/config/functions.php'
 
 ?>
 <div class="border-2">
