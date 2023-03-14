@@ -26,6 +26,10 @@ function countNote($array, $value, $increment){
     return  count(array_keys($notes, $increment));
 }
 
+function sanitize($value) {
+    return trim(htmlspecialchars($value ?? ''));
+}
+
 // public static function dateToFrench($date, $format) 
 // {
 //     $english_days = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
