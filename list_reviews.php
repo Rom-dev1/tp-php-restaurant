@@ -1,13 +1,5 @@
 <?php
-
-require_once __DIR__.'/config/functions.php'
-
-?>
-
-<?php
-
 foreach ($reviews as $review ) { ?>
-
         <div class="flex m-auto space-x-4">
             <div  class="flex w-1/5 bg-yellow-400 rounded-full justify-center items-center max-w-[60px] max-h-[60px]">
                 <span class="text-white text-xl"><?=substr($review['name'], 0,1)?></span>
@@ -32,7 +24,5 @@ foreach ($reviews as $review ) { ?>
                     <span ><?= date('l d F o')?></span>
                 </div>
             </div>
-            
         </div>
-
 <?php } ?>

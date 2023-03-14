@@ -1,11 +1,8 @@
 <?php
-
 require __DIR__.'/db.php';
 
 // requete permettant de récupere l'ensemble de la table
 $reviews = db()->query('SELECT * FROM reviews')->fetchAll();
-
-   
 
 // calcul note moyenne 
 function avgNote($array, $value){
@@ -40,5 +37,4 @@ function sanitize($value) {
 // }
 ?>
 
-<!-- $rst > 0.5 || $rst > 1.5 || $rst > 2.5 || $rst > 3.5 || $rst > 4.5 -->
 
