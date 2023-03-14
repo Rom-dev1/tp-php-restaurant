@@ -1,8 +1,3 @@
-<?php
-
-require __DIR__.'/config/functions.php'
-
-?>
 <div class="border-2">
     <div class="bg-gray-100">
        <span> Notes moyennes</span>
@@ -38,14 +33,14 @@ require __DIR__.'/config/functions.php'
                         <span class="text-sm"><?= $i ?></span>
                         <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
                     </div>
-                    <div class="flex w-3/4 rounded-md  overflow-hidden bg-gray-200 h-[15px] ">
-                        <?php  for($y = 1; $y <= countNote($reviews, 'note', $i); $y++) { ?>
-                            <div class="w-1/5 bg-yellow-400"> </div>
+                    <div class="flex w-3/4 rounded-md overflow-hidden bg-gray-200 h-[15px]">
+                        <?php for($y = 1; $y <= countNote($reviews,'note', $i); $y++) { ?>
+                            <div class="w-1/5 bg-yellow-400"></div>
                         <?php } ?>
                     </div>
                     <span>(<?= countNote($reviews, 'note', $i) ?>)</span>
                 </div>
-            <?php } ?> 
+            <?php } ?>
         </div>
         <div class="w-1/3 flex flex-col items-center justify-center space-y-3">
             <span class="text-2xl">Laissez votre avis</span>
